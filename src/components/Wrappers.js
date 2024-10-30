@@ -1,13 +1,13 @@
-const Home = ({children}) => {
+const Home = ({ children }) => {
     return (
-      <div className="w-100 h-full min-h-screen bg-black">
-        {children}
-      </div>
+        <div className="w-100 h-full min-h-screen bg-gray-400">
+            {children}
+        </div>
     );
 }
-  
-  
-const Wrapper = ({children}) => {
+
+
+const Wrapper = ({ children }) => {
     return (
         <div className="w-full h-full min-h-screen flex justify-center items-center">
             {children}
@@ -15,24 +15,24 @@ const Wrapper = ({children}) => {
     );
 }
 
-const Card = ({children}) => {
-    return ( 
-        <div className="w-96 p-1 ">
-            {children}
-        </div>
-        );
-}
-
-
-const BottomWrapper = ({children}) => {
+const Card = ({ children }) => {
     return (
-        <div className="w-full h-auto bg-gray-800 flex flex-col p-3 space-y-4 rounded-b-md">
+        <div className="w-96 p-1 ">
             {children}
         </div>
     );
 }
 
-const CardWrapper = ({children}) => {
+
+const BottomWrapper = ({ children }) => {
+    return (
+        <div className="w-full h-auto bg-slate-700 flex flex-col p-3 space-y-4 rounded-b-md">
+            {children}
+        </div>
+    );
+}
+
+const CardWrapper = ({ children }) => {
     return (
         <div className="w-full h-auto flex flex-col space-y-2 ">
             {children}

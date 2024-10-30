@@ -24,7 +24,7 @@ const App = () => {
               <Strength />
               <Button />
             </BottomWrapper>
-          <SocialLinks />
+            <SocialLinks />
           </CardWrapper>
         </Card>
       </Wrapper>

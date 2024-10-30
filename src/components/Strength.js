@@ -3,16 +3,16 @@ import { useSelector } from "react-redux";
 const Strength = () => {
     const strength = useSelector((state) => state.password.password.strength)
 
-    return ( 
+    return (
         <div className="w-full h-14 flex flex-row bg-gray-700 p-3 rounded-md">
             <div className="w-1/2 h-full flex justify-start items-center">
                 <h1 className="text-sm text-gray-400">STRENGTH</h1>
             </div>
             <div className="w-1/2 h-full flex">
                 <div className="w-1/2 h-full flex justify-center items-center">
-                    { strength === 1 && <h1 className="text-lg text-gray-300"> STRONG</h1> }
-                    { strength === 2 && <h1 className="text-lg text-gray-300"> MEDIUM</h1> }
-                    { strength === 3 && <h1 className="text-lg text-gray-300"> WEAK</h1> }
+                    {strength === 1 && <h1 className="text-lg text-gray-300"> STRONG</h1>}
+                    {strength === 2 && <h1 className="text-lg text-gray-300"> MEDIUM</h1>}
+                    {strength === 3 && <h1 className="text-lg text-gray-300"> WEAK</h1>}
                 </div>
 
                 <div className="w-1/2 h-full flex justify-end items-center space-x-1 flex-row">
@@ -22,7 +22,7 @@ const Strength = () => {
                 </div>
             </div>
         </div>
-     );
+    );
 }
- 
+
 export default Strength;

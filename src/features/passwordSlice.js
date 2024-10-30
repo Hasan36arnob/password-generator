@@ -30,16 +30,16 @@ const passwordSlice = createSlice({
             state.password.value = action.payload.value
         },
         includeCharacter: (state, action) => {
-            if(action.payload.name === 'uppercase'){
+            if (action.payload.name === 'uppercase') {
                 state.characters.uppercase.include = action.payload.value
             }
-            else if(action.payload.name === 'lowercase'){
+            else if (action.payload.name === 'lowercase') {
                 state.characters.lowercase.include = action.payload.value
             }
-            else if(action.payload.name === 'number'){
+            else if (action.payload.name === 'number') {
                 state.characters.numbers.include = action.payload.value
             }
-            else if(action.payload.name === 'symbol'){
+            else if (action.payload.name === 'symbol') {
                 state.characters.symbols.include = action.payload.value
             }
         },

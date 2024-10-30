@@ -21,10 +21,11 @@ const Button = () => {
             draggable: true,
             progress: undefined,
             theme: "dark",
-        })};
+        })
+    };
 
     const checkConstraintValidity = () => {
-        const constraintArr = Object.values(characters).map(key => {return key.include})
+        const constraintArr = Object.values(characters).map(key => { return key.include })
 
         return constraintArr.includes(true)
     }
@@ -32,29 +33,29 @@ const Button = () => {
     const handleGenerate = () => {
         const constraintSatisfied = checkConstraintValidity()
 
-        if(constraintSatisfied){
+        if (constraintSatisfied) {
             const password = generatePassword(characters, length)
-            dispatch(setPassword({value: password}))
+            dispatch(setPassword({ value: password }))
         }
         else {
             showErrorToast()
         }
     }
 
-    return ( 
+    return (
         <Wrapper>
-            <button className="btn w-full btn-accent text-lg rounded-md text-gray-200" onClick={handleGenerate}>GENERATE</button>
+            <button className="btn w-full btn-accent text-lg rounded-md text-white-400" onClick={handleGenerate}>GENERATE</button>
         </Wrapper>
-     );
+    );
 }
 
-const Wrapper = ({children}) => {
-    return ( 
+const Wrapper = ({ children }) => {
+    return (
         <div className="w-full h-14 flex flex-row justify-center items-center">
             {children}
         </div>
 
-     );
+    );
 }
 
 export default Button;
